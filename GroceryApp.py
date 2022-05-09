@@ -21,7 +21,7 @@ def display_list(list, list_item_divider):
   print(list.list_name)
   print(list_item_divider)
   for item in list.list_items:
-    print(f" {item.name} - ${item.cost} - {item.quantity}")
+    print(f" {item.name} - costs: ${item.cost} - amount wanted: {item.quantity}")
     print(list_item_divider)
 
 def edit_list(list, exit_key, edit_keys, item_divider):
@@ -64,3 +64,4 @@ def display_list_of_lists(lists, divider):
   print(divider)
   for item in lists:
     print(item.list_name)
+  print(divider)

@@ -11,7 +11,7 @@ menu_keys = {"Make new list": "1",
              "Display list": "3",
              "Close Program": "q"}
 
-main_menu_string = f"GROCERY LIST PROGRAM \n What would you like to do? \n {menu_keys['Make new list']}: Make a new list \n {menu_keys['Edit list']}: Edit an existing list \n {menu_keys['Display list']}: Display a list \n"
+main_menu_string = f"GROCERY LIST PROGRAM \n What would you like to do? \n {menu_keys['Make new list']}: Make a new list \n {menu_keys['Edit list']}: Edit an existing list \n {menu_keys['Display list']}: Display a list \n {menu_keys['Close Program']}: Close the program \n"
 
 
 exit_key = "y"
@@ -36,7 +36,7 @@ while True:
     wanted_list = input("What shopping list do you want to edit? ")
     for index in range(0, len(grocery_lists)):
       if grocery_lists[index].list_name == wanted_list:
-        edit_list(grocery_lists[index], exit_key, list_item_divider)
+        edit_list(grocery_lists[index], exit_key, [menu_keys["Add to list"], menu_keys["Remove from list"]], list_item_divider)
   elif start_input == menu_keys["Display list"]:
     for list in grocery_lists:
       print(menu_divider)
